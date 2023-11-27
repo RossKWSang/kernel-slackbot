@@ -1,4 +1,8 @@
 from slack_sdk import WebClient
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class SlackBot:
     def __init__(self, token):
@@ -26,7 +30,8 @@ class SlackBot:
         )
         return result
 
-myBot = SlackBot("xoxb-6250095696194-6250003997987-gMTVZHSClesOzux43sXqL1kJ")
+slack_token = os.getenv("SLACK_OAUTH_TOKEN")
+myBot = SlackBot(slack_token);
 
 channel_id = myBot.get_channel_id("slackbot-test");
 message = myBot.get_message(channel_id, 'answer here')
