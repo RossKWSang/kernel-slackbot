@@ -14,7 +14,7 @@ def show_how_to_use(event_type, slack_event):
     channel = slack_event["event"]["channel"]
     message = slack_event["event"]["event_ts"]
     text = "안녕하세요! 커널 360봇 입니다!\n멘션해주셔서 감사합니다.\n업데이트 및 관련 요청 문의는 석희님 원상님 현준님을 멘션해주세요."
-    myBot.p(channel, message, text)
+    myBot.post_message(channel, message, text)
     message = "[%s] 이벤트 핸들러를 찾을 수 없습니다." % event_type
     return make_response(message, 200, {"X-Slack-No-Retry": 1})
 
