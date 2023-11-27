@@ -28,6 +28,11 @@ def hears():
         print (slack_event["challenge"])
         response_dict = {"challenge": slack_event["challenge"]}
         return response_dict
+    
+    if "event" in slack_event:
+        event_type = slack_event["event"]["type"]
+        return event_handler(event_type, slack_event)
+    
     return make_response("슬랙 요청에 이벤트가 없습니다.", 404, {"X-Slack-No-Retry": 1})
 
 if __name__ == '__main__':
