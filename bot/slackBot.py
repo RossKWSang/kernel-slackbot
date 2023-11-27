@@ -29,6 +29,13 @@ class SlackBot:
             text=text
         )
         return result
+    
+    def post_message(self, channel_id, text):
+        result = self.client.chat_postMessage(
+            channel=channel_id,
+            text=text
+        )
+        return result
 
 slack_token = os.getenv("SLACK_OAUTH_TOKEN")
 myBot = SlackBot(slack_token);
