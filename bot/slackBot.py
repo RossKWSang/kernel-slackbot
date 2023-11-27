@@ -36,12 +36,3 @@ class SlackBot:
             text=text
         )
         return result
-
-slack_token = os.getenv("SLACK_OAUTH_TOKEN")
-myBot = SlackBot(slack_token);
-
-channel_id = myBot.get_channel_id("slackbot-test");
-message = myBot.get_message(channel_id, '하이')
-result = myBot.post_message_in_thread(channel_id, message, "안녕하세요")
-
-print(result);
