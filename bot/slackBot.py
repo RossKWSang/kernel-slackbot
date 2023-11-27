@@ -34,7 +34,7 @@ slack_token = os.getenv("SLACK_OAUTH_TOKEN")
 myBot = SlackBot(slack_token);
 
 channel_id = myBot.get_channel_id("slackbot-test");
-message = myBot.get_message(channel_id, 'answer here')
-result = myBot.post_message_in_thread(channel_id, message, "불꽃남자 김원상 노잠투혼 손현준 그리고 박석희")
+message = myBot.get_message(channel_id, '하이')
+result = myBot.post_message_in_thread(channel_id, message, "안녕하세요")
 
 print(result);
