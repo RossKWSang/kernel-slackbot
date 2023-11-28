@@ -30,7 +30,7 @@ def event_handler(event_type, slack_event):
     print(slack_event)
 
     if(event_type == "app_mention"): 
-        if(slack_event["event"]["text"] == "하이"):
+        if("하이" in slack_event["event"]["text"] ):
                 return say_hello(event_type, slack_event);
         return show_how_to_use(event_type, slack_event);
 
