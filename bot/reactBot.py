@@ -1,6 +1,7 @@
 import json
 from flask import Flask, request, make_response
 from slackBot import SlackBot
+from recommendBot import OutputRestaurant, Recommendation
 import os
 from dotenv import load_dotenv
 import re
@@ -43,12 +44,36 @@ def randomMember(event_type, slack_event, num):
     message = "[%s] 이벤트 핸들러를 찾을 수 없습니다." % event_type
     return make_response(message, 200, {"X-Slack-No-Retry": 1})
     
+def randomRestaurant(event_type, slack_event, category, count):
+    channel = slack_event["event"]["channel"]
+    message = slack_event["event"]["event_ts"]
+    text
+    for rec_string in [OutputRestaurant(row.tolist()).__str__() for idx, row in Recommendation.get_random(int(count)).iterrows()]:
+        text += rec_string + "\n"
+    myBot.post_message(channel, text)
+
+    message = "[%s] 이벤트 핸들러를 찾을 수 없습니다." % event_type
+    return make_response(message, 200, {"X-Slack-No-Retry": 1})
+
+def catch_restaurant(text):
+    pattern = r"식당추천\s+(\S+)\s+(\d+)군데"
+    match = re.search(pattern, text)
+
+    if match:
+        category = match.group(1)
+        count = int(match.group(2))
+        return category, count
+    else:
+        return
 
 def event_handler(event_type, slack_event):
     print(slack_event)
 
     if(event_type == "app_mention"): 
         text = slack_event["event"]["text"]
+        if ("식당추천" in text):
+            category, count = catch_restaurant(text)
+            return randomRestaurant(event_type, slack_event, category, count)
         if re.search(r"추첨\s+\d+", text):
             num = re.search(r"추첨\s+(\d+)", text).group(1)
             return randomMember(event_type, slack_event, num)
