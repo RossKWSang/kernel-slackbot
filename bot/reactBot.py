@@ -35,6 +35,7 @@ members = ["병룡님", "민협님", "영롱님", "원상님", "찬규님", "현
 def randomMember(event_type, slack_event, num):
     channel = slack_event["event"]["channel"]
     message = slack_event["event"]["event_ts"]
+    num = int(num)
     selected_members = random.sample(members, min(num, len(members)))
     text = ', '.join(selected_members)
     myBot.post_message(channel, message, text)
