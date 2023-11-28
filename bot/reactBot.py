@@ -13,6 +13,8 @@ slack_token = os.getenv("SLACK_OAUTH_TOKEN")
 myBot = SlackBot(slack_token)
 app = Flask(__name__)
 
+
+
 greetings = ["안녕", "하이", "방가"]
 
 def show_how_to_use(event_type, slack_event):
@@ -48,7 +50,10 @@ def randomRestaurant(event_type, slack_event, category, count):
     channel = slack_event["event"]["channel"]
     message = slack_event["event"]["event_ts"]
     text = ""
-    for rec_string in [OutputRestaurant(row.tolist()).__str__() for idx, row in Recommendation.get_random(int(count)).iterrows()]:
+
+    recommendation = Recommendation()
+
+    for rec_string in [OutputRestaurant(row.tolist()).__str__() for idx, row in recommendation.get_random(int(count)).iterrows()]:
         text += rec_string + "\n"
     myBot.post_message(channel, text)
 
