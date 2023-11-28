@@ -48,7 +48,7 @@ class SlackBot:
                         "type": "plain_text",
                         "text": "출석체크 QR 이미지"
                     },
-                    "image_url": "https://files.slack.com/files-tmb/T05PN75S6KB-F060SR5M1H8-6475bcdec8/image_480.png",
+                    "image_url": "https://github.com/stoneHee99/kernel-slackbot/blob/main/src/image.png?raw=true",
                     "alt_text": "출석체크 QR 이미지"
                 }
             ]
