@@ -56,12 +56,32 @@ def randomRestaurant(event_type, slack_event, category, count):
     text = ""
     values = get_spreadsheet_data(SERVICE_ACCOUNT_FILE, SPREADSHEET_ID, RANGE_NAME)
     recommendation = Recommendation(values)
-    
-    for rec_string in [OutputRestaurant(row.tolist()).__str__() for idx, row in recommendation.get_random(int(count)).iterrows()]:
-        text += rec_string + "\n"
-    myBot.post_message(channel, text)
 
-    message = "[%s] 이벤트 핸들러를 찾을 수 없습니다." % event_type
+    category_lower = category.lower()
+
+    if "km" in category_lower:
+        distance = float(category_lower.replace("km", ""))
+    elif "m" in category_lower and "km" not in category_lower:
+        distance = float(category_lower.replace("m", "")) / 1000
+
+    if "km" in category_lower or ("m" in category_lower and "km" not in category_lower):
+        for rec_string in recommendation.get_close_restaurant(distance, int(count)):
+            text += rec_string + "\n"
+
+    elif category_lower == "무작위":
+        for rec_string in [OutputRestaurant(row.tolist()).__str__() for idx, row in recommendation.get_random(int(count)).iterrows()]:
+            text += rec_string + "\n"
+
+    else:
+        for rec_string in recommendation.get_categorized_restaurant(category, int(count)):
+            text += rec_string + "\n"
+
+    if text:
+        myBot.post_message(channel, text)
+    else:
+        message = "[%s] 적절한 카테고리를 찾을 수 없습니다." % category
+        myBot.post_message(channel, message)
+
     return make_response(message, 200, {"X-Slack-No-Retry": 1})
 
 def catch_restaurant(text):
