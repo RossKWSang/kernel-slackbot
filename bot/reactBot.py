@@ -32,7 +32,7 @@ def say_hello(event_type, slack_event):
 
 members = ["병룡님", "민협님", "영롱님", "원상님", "찬규님", "현지님", "찬욱님", "석희님", "민우님", "현준님", "예진님", "종민님", "소현님", "무룡님", "윤선님", "종찬님", "호윤님", "지용님", "형준님", "주광님"]
 
-def random(event_type, slack_event, num):
+def randomMember(event_type, slack_event, num):
     channel = slack_event["event"]["channel"]
     message = slack_event["event"]["event_ts"]
     selected_members = random.sample(members, min(num, len(members)))
@@ -50,7 +50,7 @@ def event_handler(event_type, slack_event):
         text = slack_event["event"]["text"]
         if re.search(r"추첨\s+\d+", text):
             num = re.search(r"추첨\s+(\d+)", text).group(1)
-            return random(event_type, slack_event, num)
+            return randomMember(event_type, slack_event, num)
         if any(greeting in text for greeting in greetings):
                 return say_hello(event_type, slack_event) 
         return show_how_to_use(event_type, slack_event)
