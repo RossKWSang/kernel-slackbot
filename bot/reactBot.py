@@ -65,7 +65,7 @@ def randomRestaurant(event_type, slack_event, category, count):
         distance = float(category_lower.replace("m", "")) / 1000
 
     if "km" in category_lower or ("m" in category_lower and "km" not in category_lower):
-        for rec_string in recommendation.get_close_restaurant(distance, int(count)):
+        for rec_string in [OutputRestaurant(row.tolist()).__str__() for idx, row in recommendation.get_close_restaurant(distance, int(count)).iterrows()]:
             text += rec_string + "\n"
 
     elif category_lower == "무작위":
@@ -73,7 +73,7 @@ def randomRestaurant(event_type, slack_event, category, count):
             text += rec_string + "\n"
 
     else:
-        for rec_string in recommendation.get_categorized_restaurant(category, int(count)):
+        for rec_string in [OutputRestaurant(row.tolist()).__str__() for idx, row in recommendation.get_categorized_restaurant(category, int(count)).iterrows()]:
             text += rec_string + "\n"
 
     if text:
