@@ -10,6 +10,8 @@ slack_token = os.getenv("SLACK_OAUTH_TOKEN")
 myBot = SlackBot(slack_token)
 app = Flask(__name__)
 
+greetings = ["안녕", "하이", "방가"]
+
 def show_how_to_use(event_type, slack_event):
     channel = slack_event["event"]["channel"]
     message = slack_event["event"]["event_ts"]
@@ -21,7 +23,7 @@ def show_how_to_use(event_type, slack_event):
 def say_hello(event_type, slack_event):
     channel = slack_event["event"]["channel"]
     message = slack_event["event"]["event_ts"]
-    text = "안녕하세요~! :)"
+    text = "안녕하세요~! 반갑습니다 커널 봇입니다."
     myBot.post_message(channel, text)
     message = "[%s] 이벤트 핸들러를 찾을 수 없습니다." % event_type
     return make_response(message, 200, {"X-Slack-No-Retry": 1})
@@ -30,7 +32,7 @@ def event_handler(event_type, slack_event):
     print(slack_event)
 
     if(event_type == "app_mention"): 
-        if("하이" in slack_event["event"]["text"] ):
+        if any(greeting in slack_event["event"]["text"] for greeting in greetings):
                 return say_hello(event_type, slack_event);
         return show_how_to_use(event_type, slack_event);
 
