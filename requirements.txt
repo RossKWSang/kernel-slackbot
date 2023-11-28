@@ -1,3 +1,5 @@
 python-dotenv==1.0.0
 slack_sdk==3.26.0
 flask
+gspread
+google-api-python-client
