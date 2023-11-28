@@ -95,6 +95,12 @@ def catch_restaurant(text):
     else:
         return
 
+def sendQr(slack_event):
+    channel = slack_event["event"]["channel"]
+    message = slack_event["event"]["event_ts"]
+    myBot.post_qr_image(channel)
+    return make_response(message, 200, {"X-Slack-No-Retry": 1})
+
 def event_handler(event_type, slack_event):
     print(slack_event)
 
@@ -106,6 +112,8 @@ def event_handler(event_type, slack_event):
         if re.search(r"추첨\s+\d+", text):
             num = re.search(r"추첨\s+(\d+)", text).group(1)
             return randomMember(event_type, slack_event, num)
+        if ("qr" in text):
+            return sendQr(slack_event)
         if any(greeting in text for greeting in greetings):
                 return say_hello(event_type, slack_event) 
         return show_how_to_use(event_type, slack_event)

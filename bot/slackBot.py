@@ -36,3 +36,21 @@ class SlackBot:
             text=text
         )
         return result
+    
+    def post_qr_image(self, channel_id):
+        result = self.client.chat_postMessage(
+            channel=channel_id,
+            text="출석체크 QR 이미지 입니다:",
+            blocks=[
+                {
+                    "type": "image",
+                    "title": {
+                        "type": "plain_text",
+                        "text": "출석체크 QR 이미지"
+                    },
+                    "image_url": "/src/qrImage.png",
+                    "alt_text": "출석체크 QR 이미지"
+                }
+            ]
+        )
+        return result
