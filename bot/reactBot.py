@@ -18,11 +18,21 @@ def show_how_to_use(event_type, slack_event):
     message = "[%s] 이벤트 핸들러를 찾을 수 없습니다." % event_type
     return make_response(message, 200, {"X-Slack-No-Retry": 1})
 
+def say_hello(event_type, slack_event):
+    channel = slack_event["event"]["channel"]
+    message = slack_event["event"]["event_ts"]
+    text = "안녕하세요~! :)"
+    myBot.post_message(channel, text)
+    message = "[%s] 이벤트 핸들러를 찾을 수 없습니다." % event_type
+    return make_response(message, 200, {"X-Slack-No-Retry": 1})
 
 def event_handler(event_type, slack_event):
     print(slack_event)
 
-    if(event_type == "app_mention"): return show_how_to_use(event_type, slack_event);
+    if(event_type == "app_mention"): 
+        if(slack_event["event"]["text"] == "하이"):
+                return say_hello(event_type, slack_event);
+        return show_how_to_use(event_type, slack_event);
 
     channel = slack_event["event"]["channel"]
     message = slack_event["event"]["event_ts"]
