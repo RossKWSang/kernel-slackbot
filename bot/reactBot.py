@@ -38,7 +38,7 @@ def randomMember(event_type, slack_event, num):
     num = int(num)
     selected_members = random.sample(members, min(num, len(members)))
     text = ', '.join(selected_members)
-    myBot.post_message(channel, message, text)
+    myBot.post_message(channel, text)
 
     message = "[%s] 이벤트 핸들러를 찾을 수 없습니다." % event_type
     return make_response(message, 200, {"X-Slack-No-Retry": 1})
