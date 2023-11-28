@@ -2,6 +2,7 @@ import json
 from flask import Flask, request, make_response
 from slackBot import SlackBot
 from recommendBot import OutputRestaurant, Recommendation
+from gspreadFinder import get_spreadsheet_data
 import os
 from dotenv import load_dotenv
 import re
@@ -13,6 +14,9 @@ slack_token = os.getenv("SLACK_OAUTH_TOKEN")
 myBot = SlackBot(slack_token)
 app = Flask(__name__)
 
+SERVICE_ACCOUNT_FILE = '../splendid-myth-353301-a63d721b9519.json'
+SPREADSHEET_ID = os.getenv("GOOGLE_SHEET_ID")
+RANGE_NAME = '시트1!A2:G30'
 
 
 greetings = ["안녕", "하이", "방가"]
@@ -50,9 +54,9 @@ def randomRestaurant(event_type, slack_event, category, count):
     channel = slack_event["event"]["channel"]
     message = slack_event["event"]["event_ts"]
     text = ""
-
-    recommendation = Recommendation()
-
+    values = get_spreadsheet_data(SERVICE_ACCOUNT_FILE, SPREADSHEET_ID, RANGE_NAME)
+    recommendation = Recommendation(values)
+    
     for rec_string in [OutputRestaurant(row.tolist()).__str__() for idx, row in recommendation.get_random(int(count)).iterrows()]:
         text += rec_string + "\n"
     myBot.post_message(channel, text)
