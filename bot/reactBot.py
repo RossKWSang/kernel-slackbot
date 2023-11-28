@@ -47,7 +47,7 @@ def randomMember(event_type, slack_event, num):
 def randomRestaurant(event_type, slack_event, category, count):
     channel = slack_event["event"]["channel"]
     message = slack_event["event"]["event_ts"]
-    text
+    text = ""
     for rec_string in [OutputRestaurant(row.tolist()).__str__() for idx, row in Recommendation.get_random(int(count)).iterrows()]:
         text += rec_string + "\n"
     myBot.post_message(channel, text)
