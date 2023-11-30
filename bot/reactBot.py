@@ -49,6 +49,17 @@ def randomMember(event_type, slack_event, num):
 
     message = "[%s] 이벤트 핸들러를 찾을 수 없습니다." % event_type
     return make_response(message, 200, {"X-Slack-No-Retry": 1})
+
+def randomMemberParameter(event_type, slack_event, num, arr):
+    channel = slack_event["event"]["channel"]
+    message = slack_event["event"]["event_ts"]
+    num = int(num)
+    selected_members = random.sample(arr, min(num, len(arr)))
+    text = ', '.join(selected_members)
+    myBot.post_message(channel, text)
+
+    message = "[%s] 이벤트 핸들러를 찾을 수 없습니다." % event_type
+    return make_response(message, 200, {"X-Slack-No-Retry": 1})
     
 def randomRestaurant(event_type, slack_event, category, count):
     channel = slack_event["event"]["channel"]
@@ -111,6 +122,13 @@ def event_handler(event_type, slack_event):
             return randomRestaurant(event_type, slack_event, category, count)
         if re.search(r"추첨\s+\d+", text):
             num = re.search(r"추첨\s+(\d+)", text).group(1)
+
+            is_array_parameter = re.search(r"\[(.*?)\]", text)
+            if is_array_parameter:
+                array_parameter = is_array_parameter.group(1).split(',')
+                array_parameter = [array_parameter.strip() for parameter in array_parameter]
+                return randomMemberParameter(event_type, slack_event, num, array_parameter)
+            
             return randomMember(event_type, slack_event, num)
         if ("qr" in text):
             return sendQr(slack_event)
