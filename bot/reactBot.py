@@ -2,6 +2,7 @@ import json
 from flask import Flask, request, make_response
 from slackBot import SlackBot
 from recommendBot import OutputRestaurant, Recommendation
+from voteBote import VoteBote
 from gspreadFinder import get_spreadsheet_data
 import os
 from dotenv import load_dotenv
@@ -112,12 +113,13 @@ def sendQr(slack_event):
     myBot.post_qr_image(channel)
     return make_response(message, 200, {"X-Slack-No-Retry": 1})
 
+
+
 def event_handler(event_type, slack_event):
     print(slack_event)
-
-    if(event_type == "app_mention"): 
+    if event_type == "app_mention":
         text = slack_event["event"]["text"]
-        if ("식당추천" in text):
+        if "식당추천" in text:
             category, count = catch_restaurant(text)
             return randomRestaurant(event_type, slack_event, category, count)
         if re.search(r"추첨\s+\d+", text):
@@ -128,10 +130,25 @@ def event_handler(event_type, slack_event):
                 array_parameter = is_array_parameter.group(1).split(',')
                 array_parameter = [parameter.strip() for parameter in array_parameter]
                 return randomMemberParameter(event_type, slack_event, num, array_parameter)
-            
             return randomMember(event_type, slack_event, num)
-        if ("qr" in text):
+
+        if "qr" in text:
             return sendQr(slack_event)
+
+        if "식당평가 추천" in text:
+            if re.search(r"식당평가 추천\s+\w+", text):
+                try:
+                    return VoteBote(re.search(r"추첨\s+(\d+)", text).group(1)).give_upvote()
+                except IndexError as e:
+                    return e.__str__()
+
+        if "식당평가 비추" in text:
+            if re.search(r"식당평가 비추\s+\w+", text):
+                try:
+                    return VoteBote(re.search(r"추첨\s+(\d+)", text).group(1)).give_downvote()
+                except IndexError as e:
+                    return e.__str__()
+
         if any(greeting in text for greeting in greetings):
                 return say_hello(event_type, slack_event) 
         return show_how_to_use(event_type, slack_event)

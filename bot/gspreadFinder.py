@@ -24,12 +24,6 @@ values = result.get('values', [])
 recommendation = Recommendation(values)
 output_restaurant = OutputRestaurant
 
-for rec_string in [OutputRestaurant(row.tolist()).__str__() for idx, row in recommendation.get_random(3).iterrows()]:
-    print(rec_string)
-
-print(recommendation.get_categorized_restaurant("한식"), 2)
-print(recommendation.get_close_restaurant(0.2, 2))
-
 def get_spreadsheet_data(service_account_file, spreadsheet_id, range_name):
     credentials = Credentials.from_service_account_file(
         service_account_file, scopes=['https://www.googleapis.com/auth/spreadsheets.readonly'])
