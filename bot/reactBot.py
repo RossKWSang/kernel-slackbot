@@ -126,7 +126,7 @@ def event_handler(event_type, slack_event):
             is_array_parameter = re.search(r"\[(.*?)\]", text)
             if is_array_parameter:
                 array_parameter = is_array_parameter.group(1).split(',')
-                array_parameter = [array_parameter.strip() for parameter in array_parameter]
+                array_parameter = [parameter.strip() for parameter in array_parameter]
                 return randomMemberParameter(event_type, slack_event, num, array_parameter)
             
             return randomMember(event_type, slack_event, num)
