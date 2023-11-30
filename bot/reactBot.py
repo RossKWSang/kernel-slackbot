@@ -136,18 +136,28 @@ def event_handler(event_type, slack_event):
             return sendQr(slack_event)
 
         if "식당평가 추천" in text:
+            channel = slack_event["event"]["channel"]
             if re.search(r"식당평가 추천\s+\w+", text):
                 try:
-                    return VoteBote(re.search(r"추첨\s+(\d+)", text).group(1)).give_upvote()
+                    message = VoteBote(re.search(r"식당평가 추천\s+(\w+)", text).group(1)).give_upvote()
+                    myBot.post_message(channel, message)
+                    return make_response(message, 200, {"X-Slack-No-Retry": 1})
                 except IndexError as e:
-                    return e.__str__()
+                    e_message = e.__str__()
+                    myBot.post_message(channel, e_message)
+                    return make_response(e.__str__(), 200, {"X-Slack-No-Retry": 1})
 
         if "식당평가 비추" in text:
+            channel = slack_event["event"]["channel"]
             if re.search(r"식당평가 비추\s+\w+", text):
                 try:
-                    return VoteBote(re.search(r"추첨\s+(\d+)", text).group(1)).give_downvote()
+                    message = VoteBote(re.search(r"식당평가 비추\s+(\w+)", text).group(1)).give_downvote()
+                    myBot.post_message(channel, message)
+                    return make_response(message, 200, {"X-Slack-No-Retry": 1})
                 except IndexError as e:
-                    return e.__str__()
+                    e_message = e.__str__()
+                    myBot.post_message(channel, e_message)
+                    return make_response(e.__str__(), 200, {"X-Slack-No-Retry": 1})
 
         if any(greeting in text for greeting in greetings):
                 return say_hello(event_type, slack_event) 

@@ -1,0 +1,196 @@
+Traceback (most recent call last):
+  File "reactBot.py", line 3, in <module>
+    from slackBot import SlackBot
+  File "/home/ec2-user/kernel-slackbot/bot/slackBot.py", line 36, in <module>
+    channel_id = myBot.get_channel_id("slackbot-test");
+  File "/home/ec2-user/kernel-slackbot/bot/slackBot.py", line 12, in get_channel_id
+    result = self.client.conversations_list()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/slack_sdk/web/client.py", line 2957, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/slack_sdk/web/base_client.py", line 155, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/slack_sdk/web/base_client.py", line 193, in _sync_send
+    additional_headers=headers,
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/slack_sdk/web/base_client.py", line 316, in _urllib_api_call
+    status_code=response["status"],
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://www.slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+Traceback (most recent call last):
+  File "reactBot.py", line 3, in <module>
+    from slackBot import SlackBot
+  File "/home/ec2-user/kernel-slackbot/bot/slackBot.py", line 36, in <module>
+    channel_id = myBot.get_channel_id("slackbot-test");
+  File "/home/ec2-user/kernel-slackbot/bot/slackBot.py", line 12, in get_channel_id
+    result = self.client.conversations_list()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/slack_sdk/web/client.py", line 2957, in conversations_list
+    return self.api_call("conversations.list", http_verb="GET", params=kwargs)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/slack_sdk/web/base_client.py", line 155, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/slack_sdk/web/base_client.py", line 193, in _sync_send
+    additional_headers=headers,
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/slack_sdk/web/base_client.py", line 316, in _urllib_api_call
+    status_code=response["status"],
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/slack_sdk/web/slack_response.py", line 199, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack_sdk.errors.SlackApiError: The request to the Slack API failed. (url: https://www.slack.com/api/conversations.list)
+The server responded with: {'ok': False, 'error': 'not_authed'}
+ * Serving Flask app 'reactBot'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.35.209:8080
+[33mPress CTRL+C to quit[0m
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': 'f3e6b2c0-0b68-4208-93b0-e9af6a090d5b', 'type': 'app_mention', 'text': '<@U067C03VBV1>', 'user': 'U067QMF84TT', 'ts': '1701147859.031249', 'blocks': [{'type': 'rich_text', 'block_id': 'qOsk8', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701147859.031249'}, 'type': 'event_callback', 'event_id': 'Ev067M70F9B6', 'event_time': 1701147859, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+44.200.217.70 - - [28/Nov/2023 05:04:20] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '4b08226c-e67c-410e-a855-c85aea32c6cd', 'type': 'app_mention', 'text': '<@U067C03VBV1>', 'user': 'U0675DF95B8', 'ts': '1701147867.535429', 'blocks': [{'type': 'rich_text', 'block_id': 'qOsk8', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701147867.535429'}, 'type': 'event_callback', 'event_id': 'Ev067FR86X1B', 'event_time': 1701147867, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+3.226.254.112 - - [28/Nov/2023 05:04:28] "POST /slack HTTP/1.1" 200 -
+68.69.184.62 - - [28/Nov/2023 05:15:17] "[33mCONNECT www.google.com:443 HTTP/1.1[0m" 404 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '7147e3d2-89ec-4a0b-8071-c8ca866792ea', 'type': 'app_mention', 'text': '<@U067C03VBV1>', 'user': 'U067QMF84TT', 'ts': '1701149926.844149', 'blocks': [{'type': 'rich_text', 'block_id': 'qOsk8', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701149926.844149'}, 'type': 'event_callback', 'event_id': 'Ev067JP73551', 'event_time': 1701149926, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+3.236.207.31 - - [28/Nov/2023 05:38:48] "POST /slack HTTP/1.1" 200 -
+ * Serving Flask app 'reactBot'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.35.209:8080
+[33mPress CTRL+C to quit[0m
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '06c41c0a-5457-419d-8583-0f577621b7c1', 'type': 'app_mention', 'text': '<@U067C03VBV1> 추첨 1', 'user': 'U067QMF84TT', 'ts': '1701157709.762269', 'blocks': [{'type': 'rich_text', 'block_id': 'FK7wg', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' 추첨 1'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701157709.762269'}, 'type': 'event_callback', 'event_id': 'Ev067K9ZD3KL', 'event_time': 1701157709, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+44.203.42.64 - - [28/Nov/2023 07:48:30] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': 'cc8e8af7-f02a-49c7-81ec-d401bb4782b7', 'type': 'app_mention', 'text': '<@U067C03VBV1> 추첨', 'user': 'U067QMF84TT', 'ts': '1701157715.444059', 'blocks': [{'type': 'rich_text', 'block_id': 'vzbGO', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' 추첨'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701157715.444059'}, 'type': 'event_callback', 'event_id': 'Ev067K7145L3', 'event_time': 1701157715, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+18.234.238.184 - - [28/Nov/2023 07:48:36] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '2efdf177-f167-41f1-9405-0a5d33d4df1f', 'type': 'app_mention', 'text': '<@U067C03VBV1>추첨 5', 'user': 'U067QMF84TT', 'ts': '1701157731.865099', 'blocks': [{'type': 'rich_text', 'block_id': 'c7JNc', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': '추첨 5'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701157731.865099'}, 'type': 'event_callback', 'event_id': 'Ev067GC28C6R', 'event_time': 1701157731, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+54.196.103.85 - - [28/Nov/2023 07:48:52] "POST /slack HTTP/1.1" 200 -
+64.62.197.40 - - [28/Nov/2023 07:50:25] code 400, message Bad request version ('À\x14À')
+64.62.197.40 - - [28/Nov/2023 07:50:25] "[35m[1m {  wÙGÅ¹gïÍÙ®}Bqg¹§E¢¯%Õn§Á  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+/home/ec2-user/.local/lib/python3.7/site-packages/google/auth/__init__.py:55: Python37DeprecationWarning: After January 1, 2024, new releases of this library will drop support for Python 3.7. More details about Python 3.7 support can be found at https://cloud.google.com/python/docs/python37-sunset/
+  warnings.warn(message, Python37DeprecationWarning)
+/home/ec2-user/.local/lib/python3.7/site-packages/google/oauth2/__init__.py:40: Python37DeprecationWarning: After January 1, 2024, new releases of this library will drop support for Python 3.7. More details about Python 3.7 support can be found at https://cloud.google.com/python/docs/python37-sunset/
+  warnings.warn(message, Python37DeprecationWarning)
+"진양재순대"을 추천드립니다. 거리0.305km에 있는 한식식당이고 
+점심으로 사골순대국,순대국(특)가 먹을만 합니다. 
+평균 가격은 1인당 12000,
+추천점수는 0.0입니다.
+
+"재희키친"을 추천드립니다. 거리0.373km에 있는 한식식당이고 
+점심으로 고등어구이,알탕,고등어정식,갈치정식,연어정식,메로정식,알탕정식,숙주고기우동가 먹을만 합니다. 
+평균 가격은 1인당 15000,
+추천점수는 0.0입니다.
+
+"매드포갈릭"을 추천드립니다. 거리0.1km에 있는 양식식당이고 
+점심으로 시저샐러드,갈릭페노파스타,갈릭스노잉피자,갈릭시즐링라이스,갈릭스테이크가 먹을만 합니다. 
+평균 가격은 1인당 30000,
+추천점수는 0.0입니다.
+
+       가게명     거리 카테고리                                      메뉴   평균가격   별점 리뷰개수
+3  신의주부대찌개  0.216   한식  우삼겹부대찌개,두루치기,치즈계란말이,부대전골,한돈생삼겹,소곱창부대찌개  10000  0.0    0 2
+       가게명     거리 카테고리                                     메뉴   평균가격   별점 리뷰개수
+17   매드포갈릭  0.100   양식  시저샐러드,갈릭페노파스타,갈릭스노잉피자,갈릭시즐링라이스,갈릭스테이크  30000  0.0    0
+9   성북동청국장  0.043   한식                            육회비빔밥,한우청국장  12000  0.0    0
+ * Serving Flask app 'reactBot'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.35.209:8080
+[33mPress CTRL+C to quit[0m
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '5244294f-3291-4488-91e9-3f5a0ec75fd6', 'type': 'app_mention', 'text': '<@U067C03VBV1> qr', 'user': 'U067QMF84TT', 'ts': '1701234798.671399', 'blocks': [{'type': 'rich_text', 'block_id': 'LE+QT', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' qr'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701234798.671399'}, 'type': 'event_callback', 'event_id': 'Ev067U4901LL', 'event_time': 1701234798, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+3.84.73.106 - - [29/Nov/2023 05:13:19] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '7e29b5c4-5c49-4cbd-808e-099de7723373', 'type': 'app_mention', 'text': '<@U067C03VBV1> 식당추천 무작위 3군데', 'user': 'U067QMF84TT', 'ts': '1701234930.157289', 'blocks': [{'type': 'rich_text', 'block_id': 'lOU1V', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' 식당추천 무작위 3군데'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701234930.157289'}, 'type': 'event_callback', 'event_id': 'Ev067U4FGD3N', 'event_time': 1701234930, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+44.213.104.125 - - [29/Nov/2023 05:15:32] "POST /slack HTTP/1.1" 200 -
+23.92.22.112 - - [29/Nov/2023 05:58:44] code 400, message Bad request version ('À\x13À')
+23.92.22.112 - - [29/Nov/2023 05:58:44] "[35m[1m î  êÎQ½þ/¶/æg``#Íû±}_\ûñ==èÈ# b¸ÉF(¡?\'Û_5l¡![>]GÍÝçe¾ &Ì©Ì¨À+À/À,À0À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+45.128.232.127 - - [29/Nov/2023 06:17:20] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+167.248.133.33 - - [29/Nov/2023 06:57:58] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.33 - - [29/Nov/2023 06:58:02] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.33 - - [29/Nov/2023 06:58:02] code 505, message Invalid HTTP version (2.0)
+167.248.133.33 - - [29/Nov/2023 06:58:02] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+205.185.125.165 - - [29/Nov/2023 08:23:59] "[33mGET /manager/html HTTP/1.1[0m" 404 -
+94.103.124.216 - - [29/Nov/2023 08:25:41] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+198.235.24.148 - - [29/Nov/2023 08:49:32] "[33mGET / HTTP/1.0[0m" 404 -
+45.90.13.148 - - [29/Nov/2023 09:18:23] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+205.210.31.154 - - [29/Nov/2023 09:22:31] code 400, message Bad request version ('À\x13À')
+205.210.31.154 - - [29/Nov/2023 09:22:31] "[35m[1m î  ê7MÍM)Î:¦oo .NâøvGöÞ9Ç*Åúí w{ Ì¤c4·µô@ª¦úõç÷_|dâÿ¹kÍ &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+205.210.31.154 - - [29/Nov/2023 09:22:32] code 400, message Bad request syntax ('\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03BY§éÊ|Â;ÅÍ\x9fùg:±Z[V\x8aá\x88\x94')
+205.210.31.154 - - [29/Nov/2023 09:22:32] "[35m[1m Ê  ÆBY§éÊ|Â;ÅÍùg:±Z[Vá[0m" HTTPStatus.BAD_REQUEST -
+185.91.127.66 - - [29/Nov/2023 09:29:53] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+205.210.31.131 - - [29/Nov/2023 09:47:45] "[33mGET / HTTP/1.1[0m" 404 -
+192.241.239.41 - - [29/Nov/2023 11:42:12] "[33mGET / HTTP/1.1[0m" 404 -
+117.210.153.53 - - [29/Nov/2023 11:45:40] "[33mGET / HTTP/1.1[0m" 404 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': 'C69DAE0B-4D58-4CD1-AB9F-1505A313690D', 'type': 'app_mention', 'text': '<@U067C03VBV1> ', 'user': 'U067QMF84TT', 'ts': '1701260858.976289', 'blocks': [{'type': 'rich_text', 'block_id': 'RnQVf', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' '}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701260858.976289'}, 'type': 'event_callback', 'event_id': 'Ev067TEFE803', 'event_time': 1701260858, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+54.226.201.126 - - [29/Nov/2023 12:27:40] "POST /slack HTTP/1.1" 200 -
+78.108.177.54 - - [29/Nov/2023 13:11:57] "[33mGET / HTTP/1.0[0m" 404 -
+45.128.232.95 - - [29/Nov/2023 13:17:23] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+183.136.225.9 - - [29/Nov/2023 13:18:02] "[33mGET / HTTP/1.1[0m" 404 -
+183.136.225.9 - - [29/Nov/2023 13:18:02] "[33mGET / HTTP/1.1[0m" 404 -
+183.136.225.9 - - [29/Nov/2023 13:18:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+183.136.225.9 - - [29/Nov/2023 13:18:03] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+141.98.7.27 - - [29/Nov/2023 13:21:59] "[33mCONNECT cloudflare.com:443 HTTP/1.1[0m" 404 -
+45.128.232.15 - - [29/Nov/2023 14:27:12] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+205.210.31.45 - - [29/Nov/2023 18:39:02] code 400, message Bad request version ('Ð\x02G\x07È\x80\x92G}ç\x87Vóä\x8båNÉ\'ñ\x15+p(>\x19\x93X"é"')
+205.210.31.45 - - [29/Nov/2023 18:39:02] "[35m[1m î  êçÉ	(|;ÍjÆïDÿðÎý+, ÐGÈG}çVóäåNÉ'ñ+p(>X"é"[0m" HTTPStatus.BAD_REQUEST -
+205.210.31.45 - - [29/Nov/2023 18:39:03] code 400, message Bad request version ('À(À$À\x14À')
+205.210.31.45 - - [29/Nov/2023 18:39:03] "[35m[1m Ê  Æt1gá~Ìùèêù¼IøHÇ1±zOÌ/  hÌÌÀ/À+À0À,ÀÀÀ'À#ÀÀ	À(À$ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+198.235.24.149 - - [29/Nov/2023 18:59:15] "[33mGET / HTTP/1.1[0m" 404 -
+141.98.7.135 - - [29/Nov/2023 19:13:53] "[33mGET / HTTP/1.1[0m" 404 -
+185.180.143.49 - - [29/Nov/2023 19:20:04] "[33mGET / HTTP/1.1[0m" 404 -
+192.241.195.83 - - [29/Nov/2023 20:23:41] "[33mGET /manager/text/list HTTP/1.1[0m" 404 -
+167.71.102.95 - - [29/Nov/2023 20:23:42] code 400, message Bad request syntax ('\x00\x0e8\x96Ý\x83o\x84"XX\x00\x00\x00\x00\x00')
+167.71.102.95 - - [29/Nov/2023 20:23:42] "[35m[1m 8Ýo"XX     [0m" HTTPStatus.BAD_REQUEST -
+46.174.191.29 - - [29/Nov/2023 21:33:20] "[33mGET / HTTP/1.0[0m" 404 -
+78.108.177.51 - - [29/Nov/2023 22:39:02] "[33mGET / HTTP/1.0[0m" 404 -
+205.210.31.17 - - [29/Nov/2023 23:08:16] "[33mGET / HTTP/1.0[0m" 404 -
+167.248.133.49 - - [29/Nov/2023 23:20:39] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.49 - - [29/Nov/2023 23:20:44] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.49 - - [29/Nov/2023 23:20:46] code 505, message Invalid HTTP version (2.0)
+167.248.133.49 - - [29/Nov/2023 23:20:46] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+178.128.0.16 - - [29/Nov/2023 23:24:29] code 400, message Bad request version ('À\x14À')
+178.128.0.16 - - [29/Nov/2023 23:24:29] "[35m[1m {  wÃò?yMm'y'dÜe­"mmiG¦ã`¼%  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+178.128.0.16 - - [29/Nov/2023 23:24:29] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03gF:\x1a`Õl#\x93aa4bí-_è\x03\x08P\x93\x07õÎWÚ«L-i¦¡\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+178.128.0.16 - - [29/Nov/2023 23:24:29] "[35m[1m {  wgF:`Õl#aa4bí-_èPõÎWÚ«L-i¦¡  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+178.128.0.16 - - [29/Nov/2023 23:24:29] "[33mGET / HTTP/1.1[0m" 404 -
+178.128.0.16 - - [29/Nov/2023 23:24:29] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ò\x03~Î\x99`\x9f\x89Ê^?=Dí\x97úï')
+178.128.0.16 - - [29/Nov/2023 23:24:29] "[35m[1m {  wÒ~Î`Ê^?=Díúï[0m" HTTPStatus.BAD_REQUEST -
+178.128.0.16 - - [29/Nov/2023 23:24:30] "[33mGET http://checkip.dyndns.org/ HTTP/1.1[0m" 404 -
+178.128.0.16 - - [29/Nov/2023 23:24:30] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03£½\x1aüÛð^å_î\x95ü\x95#$5\x8a\x7f\x8e\x81ü»\x84Ýá\x91g\x8bÓ,ÝS\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+178.128.0.16 - - [29/Nov/2023 23:24:30] "[35m[1m {  w£½üÛð^å_îü#$5ü»ÝágÓ,ÝS  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+167.248.133.189 - - [29/Nov/2023 23:27:59] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.189 - - [29/Nov/2023 23:28:02] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.189 - - [29/Nov/2023 23:28:03] code 505, message Invalid HTTP version (2.0)
+167.248.133.189 - - [29/Nov/2023 23:28:03] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+35.203.211.122 - - [30/Nov/2023 00:37:52] "[33mGET / HTTP/1.1[0m" 404 -
+198.235.24.245 - - [30/Nov/2023 00:38:19] "[33mGET / HTTP/1.0[0m" 404 -
+205.210.31.143 - - [30/Nov/2023 01:14:03] code 400, message Bad request version ('À\x13À')
+205.210.31.143 - - [30/Nov/2023 01:14:03] "[35m[1m î  êUßËÑÍ^=ÈP3Ä£ ¹&!|í5iW.è¬r² åËö¨6æuòa·Ö	a/º÷ËaóÚ£ù§þ^a &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+205.210.31.143 - - [30/Nov/2023 01:14:03] code 400, message Bad request version ('À(À$À\x14À')
+205.210.31.143 - - [30/Nov/2023 01:14:03] "[35m[1m Ê  Æû:lb,Ô¨óp%çÃw°Ç*î{éDoV  hÌÌÀ/À+À0À,ÀÀÀ'À#ÀÀ	À(À$ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '95526411-7abf-4225-964c-f2daa663f625', 'type': 'app_mention', 'text': '<@U067C03VBV1> qr', 'user': 'U067QMF84TT', 'ts': '1701309521.820009', 'blocks': [{'type': 'rich_text', 'block_id': 'LE+QT', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' qr'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701309521.820009'}, 'type': 'event_callback', 'event_id': 'Ev067HGQL1JB', 'event_time': 1701309521, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+54.242.93.213 - - [30/Nov/2023 01:58:43] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '8cde4332-09fc-4335-b128-704f4158a68d', 'type': 'app_mention', 'text': '<@U067C03VBV1>', 'user': 'U0675DF95B8', 'ts': '1701309632.845289', 'blocks': [{'type': 'rich_text', 'block_id': 'qOsk8', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701309632.845289'}, 'type': 'event_callback', 'event_id': 'Ev068AMSV4KT', 'event_time': 1701309632, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+3.239.5.137 - - [30/Nov/2023 02:00:34] "POST /slack HTTP/1.1" 200 -
+159.223.12.224 - - [30/Nov/2023 02:06:37] "[33mGET / HTTP/1.1[0m" 404 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '7b67df0e-8673-4f6a-8440-99e434a435e8', 'type': 'app_mention', 'text': '<@U067C03VBV1> 추첨 3', 'user': 'U067QMF84TT', 'ts': '1701313633.780779', 'blocks': [{'type': 'rich_text', 'block_id': 'YYh6o', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' 추첨 3'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701313633.780779'}, 'type': 'event_callback', 'event_id': 'Ev068ATT095F', 'event_time': 1701313633, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+18.214.37.216 - - [30/Nov/2023 03:07:14] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '248f9af9-24bb-4190-b271-0b56d44dac62', 'type': 'app_mention', 'text': '<@U067C03VBV1> 추첨5', 'user': 'U0675DFDDN2', 'ts': '1701313655.689049', 'blocks': [{'type': 'rich_text', 'block_id': 'CPKah', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' 추첨5'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701313655.689049'}, 'type': 'event_callback', 'event_id': 'Ev067Y6AH22F', 'event_time': 1701313655, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+54.196.206.135 - - [30/Nov/2023 03:07:36] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': 'abf74d3e-40c9-4aec-a344-1ba4c1b31526', 'type': 'app_mention', 'text': '<@U067C03VBV1> 추첨5', 'user': 'U0675DFDDN2', 'ts': '1701313666.505929', 'blocks': [{'type': 'rich_text', 'block_id': 'CPKah', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' 추첨5'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701313666.505929'}, 'type': 'event_callback', 'event_id': 'Ev067VBB6HPF', 'event_time': 1701313666, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+54.91.27.230 - - [30/Nov/2023 03:07:47] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': 'c9b00618-0d6d-4d0e-b750-d8a11e5b90c3', 'type': 'app_mention', 'text': '<@U067C03VBV1> 추첨 5', 'user': 'U0675DFDDN2', 'ts': '1701313679.567959', 'blocks': [{'type': 'rich_text', 'block_id': '3bhhT', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' 추첨 5'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701313679.567959'}, 'type': 'event_callback', 'event_id': 'Ev067Y9A7P3L', 'event_time': 1701313679, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+107.21.6.78 - - [30/Nov/2023 03:08:00] "POST /slack HTTP/1.1" 200 -
+184.105.139.81 - - [30/Nov/2023 03:26:31] "[33mGET / HTTP/1.1[0m" 404 -
+184.105.139.113 - - [30/Nov/2023 03:27:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+184.105.139.117 - - [30/Nov/2023 03:27:43] "[33mGET http://api.ipify.org/?format=json HTTP/1.1[0m" 404 -
+184.105.139.77 - - [30/Nov/2023 03:28:08] "[33mCONNECT www.shadowserver.org:443 HTTP/1.1[0m" 404 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '7dfeb663-5860-4d74-9b24-eb9831c7e38f', 'type': 'app_mention', 'text': '<@U067C03VBV1> qr', 'user': 'U0675DF95B8', 'ts': '1701315401.072929', 'blocks': [{'type': 'rich_text', 'block_id': 'LE+QT', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' qr'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701315401.072929'}, 'type': 'event_callback', 'event_id': 'Ev068MB42EFJ', 'event_time': 1701315401, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+3.239.30.249 - - [30/Nov/2023 03:36:42] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '340e12bb-94f6-41bf-960a-96c180972cab', 'type': 'app_mention', 'text': '<@U067C03VBV1> 추첨 5', 'user': 'U0675DF95B8', 'ts': '1701315408.602629', 'blocks': [{'type': 'rich_text', 'block_id': '3bhhT', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' 추첨 5'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701315408.602629'}, 'type': 'event_callback', 'event_id': 'Ev067VDLM85B', 'event_time': 1701315408, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+54.144.3.203 - - [30/Nov/2023 03:36:49] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '4e27bb64-5c64-4300-b55f-503d3a8c7fd9', 'type': 'app_mention', 'text': '<@U067C03VBV1> 식당추천 무작위 3군데', 'user': 'U0675DF95B8', 'ts': '1701315416.623139', 'blocks': [{'type': 'rich_text', 'block_id': 'lOU1V', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' 식당추천 무작위 3군데'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701315416.623139'}, 'type': 'event_callback', 'event_id': 'Ev067YBKF91Q', 'event_time': 1701315416, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+44.201.50.11 - - [30/Nov/2023 03:36:58] "POST /slack HTTP/1.1" 200 -
+{'token': 'XIl8MjHFfboSNpINBb61xY2b', 'team_id': 'T067C2TLG5Q', 'api_app_id': 'A067QMJM917', 'event': {'client_msg_id': '6f785d29-5079-43a6-aee1-e9214a7623fc', 'type': 'app_mention', 'text': '<@U067C03VBV1> 식당추천 한식 3군데', 'user': 'U0675DF95B8', 'ts': '1701315426.886949', 'blocks': [{'type': 'rich_text', 'block_id': 'd6ZaB', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'user', 'user_id': 'U067C03VBV1'}, {'type': 'text', 'text': ' 식당추천 한식 3군데'}]}]}], 'team': 'T067C2TLG5Q', 'channel': 'C0675HXNLLW', 'event_ts': '1701315426.886949'}, 'type': 'event_callback', 'event_id': 'Ev067HRAN1LP', 'event_time': 1701315426, 'authorizations': [{'enterprise_id': None, 'team_id': 'T067C2TLG5Q', 'user_id': 'U067C03VBV1', 'is_bot': True, 'is_enterprise_install': False}], 'is_ext_shared_channel': False, 'event_context': '4-eyJldCI6ImFwcF9tZW50aW9uIiwidGlkIjoiVDA2N0MyVExHNVEiLCJhaWQiOiJBMDY3UU1KTTkxNyIsImNpZCI6IkMwNjc1SFhOTExXIn0'}
+18.208.179.31 - - [30/Nov/2023 03:37:09] "POST /slack HTTP/1.1" 200 -
+198.235.24.238 - - [30/Nov/2023 03:40:26] "[33mGET / HTTP/1.1[0m" 404 -
+192.241.235.28 - - [30/Nov/2023 04:28:56] code 400, message Bad request syntax ('MGLNDD_54.180.92.196_8080')
+192.241.235.28 - - [30/Nov/2023 04:28:56] "[35m[1mMGLNDD_54.180.92.196_8080[0m" HTTPStatus.BAD_REQUEST -

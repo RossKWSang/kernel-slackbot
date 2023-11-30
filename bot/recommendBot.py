@@ -7,13 +7,15 @@ class OutputRestaurant:
         self.category = restaurant_info[2]
         self.menu = restaurant_info[3]
         self.average_price = restaurant_info[4]
-        self.recommendation_score = restaurant_info[5]
+        self.upvote_score = restaurant_info[5]
+        self.downvote_score = restaurant_info[6]
 
     def __str__(self):
         return f"\"{self.name}\"을 추천드립니다. 거리{self.dist}km에 있는 {self.category}식당이고 " \
-               f"\n점심으로 {self.menu}가 먹을만 합니다. " \
-               f"\n평균 가격은 1인당 {self.average_price}," \
-               f"\n추천점수는 {self.recommendation_score}입니다.\n"
+               f"\n점심으로 {self.menu}이 먹을만 합니다. " \
+               f"\n평균 가격은 1인당 {self.average_price}입니다." \
+               f"\n추천개수: {int(self.upvote_score)}" \
+               f"\n비추개수: {self.downvote_score}\n"
 
 
 class Recommendation:
