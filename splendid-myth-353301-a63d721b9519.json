@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "splendid-myth-353301",
+  "private_key_id": "a63d721b9519ead7f820ae209be027c8fb6fb5d3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDGuShGF/zw0nWg\njaIj4Qi54rk2CDwlpYDx5wQNzxLsLappYuRzCKG/BBtr/wug7VmODr9i2RjEO3PI\n4BrlhWfZfnKupyoUrm1/xZa2x9lklGajGXCPtB4nbqOFrX9m1ZhZrnjjpixQqptU\nv8cS4h0JsohdtL5gzEBQBpV3abcP2NdpSCJBynSfSlIfA7zkh/dbuCIDy6h0GEvx\n44gGb8Xk/+0sXLH5xF0XMwpbmaHTLTJPuUrMGbOt28ztNdsqomieo4JW68uMqv7q\nNMot1EK90I2uQxX2FidecfE/puBZfSxcwlMZjHdJS7iVIz9O9LegavIDssNDft2v\ncZHL1cvZAgMBAAECggEAHcdNOQO14ZiIC+EYH5bvKdEcaUkJSlLnZFh2i7iGC2I5\nxm+38Az7v+tWTfP6wsi5F3KE925ffw2xp15TFCXOOWdGDtSkl6jJESaDaSxqxTRV\nFQe7ja0zVOaywQC4tf438D3BhnY2RHhBrTd3wLqlbfiU5VsvqW2yDXaPG0Uk1iN9\nOrtkz2ht9ZMOOPUql9MbDmuAhHpEFCufW0rCwS4pSZew8b0snlNljoJdqIPpuSRN\nGgX/MHo6gtuNE3HwWvOwukFDDhn/yBu+4HGB8nvbyisyqVk54n4NPg9wtqWLdvW5\nr8xLAShVvHE6J5QqHY43qgoUciohf/2cQpe4X2NmCQKBgQDyAFTR73eKRle33+mP\nFzU4QvivsyCDAcPVi70K6JRe8pGtc5YcCHo3ZiGdsN6XIwWjI/32NZu5R29b6/Cp\nqt9hCfb8blx1xTthhE1LKjVdnqnp8m/yZGpMFJ77YQ6XzuaelUF6bRyMVLZ8gHho\niqZ/YBQdVMGQZZutfVD0Ee8iOwKBgQDSN/HZOXU8mVNEGhFPcCGT3y0hpT7qv6dj\nBAeAgcafc0hii5+vCFDFfN2ZFI7yXZ/PlXM/kKsMkR7ZVfaPybkHLrcxqFZAFo3u\ng98yTnTvxh0K4IxOugr1KWm/0hfWWke1e9sj/PfYVyCuHRZmvHEeTH5IyBLVoP/o\neF7/Gk30+wKBgQDVJMmQJfQJi68SulpBt1Ueeo4CYiiOem17lhook3Sqs8bvGFDr\n2+OZC5EsDG3ge+4pJDg4NDs10t8X/RT4uxEHrPkmmCVDbTXBy/8v5rsd+/L3pJpI\nyXx+CeOE0JVDy+1/W0JSi+uLBcm8moJywTuoEH1m4BGkFnopMaitb2ZJpQKBgHpj\nHce0/v9P2L1eW9Oe2b2ogjMDbLTo7b/k2aVEaOnuCSduWIJj2fqQLsdvw6VxQpht\nTxKj3CHN32Ly/EBMVg/Lb9ZWRhi7yNgjKG+2Y7gw5Dmv75/qCnUfLjUCUOR33SXY\nvQWfwn/OgfU8dA1OCqF0MVWYPfbn6/VhFxV4MAi/AoGAPecVVFa1UCoh/M2eHQHJ\n29iOYh1l5TGA3e2GjUiltcqtdvMA2+rdm4vF/usP5736oZnvCh0s05exTj0qHj0t\nOq5KJVwpBDR91Kx3RdxaVkAW+uAn6SXDxiya2ilPKY7Uh6AS2HKWvpZpZZ/NdK7h\n/+sS4O+fAWoPcKhcB26up4Y=\n-----END PRIVATE KEY-----\n",
+  "client_email": "kernelbot-account@splendid-myth-353301.iam.gserviceaccount.com",
+  "client_id": "112276486463725315800",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kernelbot-account%40splendid-myth-353301.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
