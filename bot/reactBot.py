@@ -159,11 +159,11 @@ def event_handler(event_type, slack_event):
                     myBot.post_message(channel, e_message)
                     return make_response(e.__str__(), 200, {"X-Slack-No-Retry": 1})
 
-        if "비추" in text:
+        if "식당평가 비추" in text:
             channel = slack_event["event"]["channel"]
-            if re.search(r"비추\s+\w+", text):
+            if re.search(r"식당평가 비추\s+\w+", text):
                 try:
-                    message = VoteBote(re.search(r"비추\s+(\w+)", text).group(1)).give_downvote()
+                    message = VoteBote(re.search(r"식당평가 비추\s+(\w+)", text).group(1)).give_downvote()
                     myBot.post_message(channel, message)
                     return make_response(message, 200, {"X-Slack-No-Retry": 1})
                 except IndexError as e:
@@ -171,11 +171,11 @@ def event_handler(event_type, slack_event):
                     myBot.post_message(channel, e_message)
                     return make_response(e.__str__(), 200, {"X-Slack-No-Retry": 1})
 
-        if "식당평가 비추" in text:
+        if "비추" in text:
             channel = slack_event["event"]["channel"]
-            if re.search(r"식당평가 비추\s+\w+", text):
+            if re.search(r"비추\s+\w+", text):
                 try:
-                    message = VoteBote(re.search(r"식당평가 비추\s+(\w+)", text).group(1)).give_downvote()
+                    message = VoteBote(re.search(r"비추\s+(\w+)", text).group(1)).give_downvote()
                     myBot.post_message(channel, message)
                     return make_response(message, 200, {"X-Slack-No-Retry": 1})
                 except IndexError as e:
