@@ -12,7 +12,7 @@ class OutputRestaurant:
 
     def __str__(self):
         return f"\"{self.name}\"을 추천드립니다. 거리{self.dist}km에 있는 {self.category}식당이고 " \
-               f"\n점심으로 {self.menu}이 먹을만 합니다. " \
+               f"\n점심으로 {self.menu}이(가) 먹을만 합니다. " \
                f"\n평균 가격은 1인당 {self.average_price}입니다." \
                f"\n추천개수: {int(self.upvote_score)}" \
                f"\n비추개수: {self.downvote_score}\n"

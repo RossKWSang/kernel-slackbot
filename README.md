@@ -57,11 +57,19 @@
 1. 추천하기
 ```commandline
 @KernelBot 식당평가 추천 솔향기
+
+또는
+
+@KernelBot 개추 솔향기
 ```
 
 2. 비추하기
 ```commandline
 @KernelBot 식당평가 비추 솔향기
+
+개추
+
+@KernelBot 비추 솔향기
 ```
 
 ---
